@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "python-tire-degradation"
+version = "0.1.0"
+description = ""
+authors = ["Patrick Kalkman <patrick@simpletechture.nl>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "python_tire_degradation"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
