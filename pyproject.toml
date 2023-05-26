@@ -9,6 +9,12 @@ packages = [{include = "python_tire_degradation"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+fastf1 = "^3.0.3"
+pandasai = "^0.2.14"
+seaborn = "^0.12.2"
+requests = "^2.31.0"
+loguru = "^0.7.0"
+python-dotenv = "^1.0.0"
 
 
 [build-system]
