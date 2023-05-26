@@ -114,17 +114,18 @@ def main():
     load_dotenv()
 
     # read the OPEN_API_KEY from the environment
-    OPEN_API_KEY = os.environ.get('OPENAI_API_KEY')
-    llm = OpenAI(api_token=OPEN_API_KEY)
-    pandas_ai = PandasAI(llm)
-    result = pandas_ai.run(total_df, prompt='List all the average lap times of all drivers and sort them ascending?')
-    print(result)
+    # uncomment the following to enable using Pandas AI
+    # OPEN_API_KEY = os.environ.get('OPENAI_API_KEY')
+    # llm = OpenAI(api_token=OPEN_API_KEY)
+    # pandas_ai = PandasAI(llm)
+    # result = pandas_ai.run(total_df, prompt='List all the average lap times of all drivers?')
+    #print(result)
 
-    # max_df = total_df[total_df['driverId'] == 'max_verstappen']
-    # perez_df = total_df[total_df['driverId'] == 'perez']
+    max_df = total_df[total_df['driverId'] == 'max_verstappen']
+    perez_df = total_df[total_df['driverId'] == 'perez']
 
     # plot_lap_times_single(max_df)
-    # plot_lap_times(max_df, perez_df)
+    plot_lap_times(max_df, perez_df)
 
 
 if __name__ == '__main__':
